@@ -14,14 +14,9 @@
     }
 
     header {
-     text-align: center;
-     padding: 50px 20px;
-     background-color: black;
-     background-image: url("banner.png");
-     background-repeat: no-repeat;
-     background-position: center;
-     background-size: contain;
-     image-rendering: pixelated;
+      text-align: center;
+      padding: 40px 20px;
+      background-color: black;
     }
 
     h1 {
@@ -74,13 +69,21 @@
       font-size: 14px;
       color: #777;
     }
-
+     .banner {
+       width: 100%;
+       max-width: 800px;
+       margin-bottom: 20px;
+       image-rendering: pixelated;
+}
   </style>
 </head>
 
 <body>
 
 <header>
+
+  <img src="banner.png" class="banner">
+
   <h1>Helena Taylor</h1>
   <p>Game Artist • 2D • 3D • Pixel Art • Concept Art</p>
 </header>
