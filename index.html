@@ -168,31 +168,31 @@ header {
 }
 
 .side-lines span:nth-child(1) {
-  height: 450px;
+  side-lines span:nth-child(1) { --final-height: 260px; animation-delay: 0.1s; }
   animation-delay: 0.10s;
 }
 
 .side-lines span:nth-child(2) {
-  height: 600px;
+  side-lines span:nth-child(2) { --final-height: 420px; animation-delay: 0.2s; }
   animation-delay: 0.22s;
 }
 
 .side-lines span:nth-child(3) {
-  height: 520px;
+  side-lines span:nth-child(3) { --final-height: 320px; animation-delay: 0.3s; }
   animation-delay: 0.34s;
 }
 
 .side-lines span:nth-child(4) {
-  height: 400px;
+  side-lines span:nth-child(4) { --final-height: 220px; animation-delay: 0.4s; }
   animation-delay: 0.46s;
 }
 
-@keyframes riseLine {
+@keyframes growLine {
   from {
-    transform: translateY(200px);
+    height: 0;
   }
   to {
-    transform: translateY(0);
+    height: var(--final-height);
   }
 }
 
