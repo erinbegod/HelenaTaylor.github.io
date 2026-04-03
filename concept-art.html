@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Concept Art - Helena Taylor</title>
   <link rel="icon" type="image/png" href="favicon.png">
+
+
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
@@ -48,6 +50,19 @@ h2 {
       max-width: 900px;
       margin: 0 auto 40px;
     }
+
+.shine-title {
+  animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
 
     .back-btn {
       display: inline-block;
@@ -95,7 +110,7 @@ h3 {
   <div class="page">
     <a href="index.html" class="back-btn">Back</a>
 
-    <h1>Concept Art</h1>
+    <h1 class="shine-title">Concept Art</h1>
     <p>
       A selection of concept art pieces focused on visual development,
       atmosphere, character ideas and worldbuilding.
