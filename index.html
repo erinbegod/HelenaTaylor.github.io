@@ -162,10 +162,9 @@ header {
   width: 14px;
   border-radius: 999px 999px 0 0;
   background: black;
-  box-shadow: none;
+
   transform: translateY(200px);
-  opacity: 0;
-  animation: riseLine 1s ease-out forwards;
+  animation: riseLine 0.8s ease-out forwards;
 }
 
 .side-lines span:nth-child(1) {
@@ -190,14 +189,13 @@ header {
 
 @keyframes riseLine {
   from {
-    transform: translateY(140px);
-    opacity: 0;
+    transform: translateY(200px);
   }
   to {
     transform: translateY(0);
-    opacity: 1;
   }
 }
+
   </style>
 </head>
 
