@@ -102,6 +102,43 @@
       animation: spin 6s linear infinite;
     }
 
+.viewer-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bottom-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 28px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.75) 0%, rgba(219, 112, 147, 0.35) 45%, rgba(255, 182, 193, 0) 80%);
+  filter: blur(12px);
+  z-index: 2;
+  pointer-events: none;
+  animation: pulseGlow 1.8s ease-in-out infinite;
+}
+
+model-viewer {
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.08);
+  }
+}
+
     .ring {
       width: 180px;
       height: 180px;
@@ -151,8 +188,9 @@
 
     <!-- CARD INTERATIVO -->
     <div class="card">
-<div class="viewer-wrap">
-  <div class="bottom-glow"></div>
+    <div class="viewer-wrap">
+     <div class="bottom-glow"></div>
+
       <model-viewer
         src="teleprompt.glb"
         alt="3D model preview"
