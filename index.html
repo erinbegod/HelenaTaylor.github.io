@@ -32,9 +32,11 @@
     }
 
     .section {
-      padding: 80px 60px;
-      max-width: 1400px;
-      margin: 0 auto;
+      padding: 60px 24px;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      box-sizing: border-box;
     }
 
     .grid {
@@ -49,11 +51,22 @@
       border-radius: 12px;
       transition: 0.3s;
     }
-     .card img {
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(500px, 1fr));
+      gap: 36px;
+    }
+    .projects-grid .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 16px;
+    }
+    .projects-grid .card img {
       width: 100%;
-      height: 220px;
+      height: 360px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 10px;
+      display: block;
     }
 
     .card:hover {
