@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Render - Helena Taylor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    h1 {
+      color: #FFD1DC;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+    p {
+      color: #ddd;
+      text-align: center;
+      line-height: 1.8;
+      font-size: 12px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: black;
+      background: #FFD1DC;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 12px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      background: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a href="index.html" class="back-btn">Back</a>
+
+    <h1>3D Render</h1>
+    <p>
+      A selection of 3D renders showcasing modeling, lighting,
+      composition, atmosphere and scene presentation.
+    </p>
+
+    <div class="gallery">
+      <img src="render1.png" alt="3D render 1">
+      <img src="render2.png" alt="3D render 2">
+      <img src="render3.png" alt="3D render 3">
+      <img src="render4.png" alt="3D render 4">
+      <img src="render5.png" alt="3D render 5">
+      <img src="render6.png" alt="3D render 6">
+    </div>
+  </div>
+</body>
+</html>

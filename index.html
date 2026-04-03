@@ -93,10 +93,32 @@
        max-width: 800px;
        margin-bottom: 20px;
        image-rendering: pixelated;
-}
+    }
      .subtitle {
        color: black;
-}
+    }
+     .art-button {
+       text-decoration: none;
+       color: white;
+       display: block;
+    }
+
+     .art-button:hover {
+       transform: scale(1.03);
+    }
+
+     .art-button h3 {
+       margin-top: 15px;
+    }
+
+     .art-grid .card img {
+       width: 100%;
+       height: 220px;
+       object-fit: cover;
+       border-radius: 8px;
+       display: block;
+    }
+
   </style>
 </head>
 
@@ -138,22 +160,22 @@
 <div class="section">
   <h2>Art</h2>
 
-  <div class="grid">
+  <div class="grid art-grid">
 
-    <div class="card">
-      <img src="arte1.png">
-      <p>Concept Art</p>
-    </div>
+    <a href="concept-art.html" class="card art-button">
+      <img src="concept-thumb.png">
+      <h3>Concept Art</h3>
+    </a>
 
-    <div class="card">
-      <img src="arte2.png">
-      <p>Pixel Art</p>
-    </div>
+    <a href="pixel-art.html" class="card art-button">
+      <img src="pixel-thumb.png">
+      <h3>Pixel Art</h3>
+    </a>
 
-    <div class="card">
-      <img src="arte3.png">
-      <p>3D Render</p>
-    </div>
+    <a href="render-3d.html" class="card art-button">
+      <img src="render-thumb.png">
+      <h3>3D Render</h3>
+    </a>
 
   </div>
 </div>
