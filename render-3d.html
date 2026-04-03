@@ -2,84 +2,189 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Render - Helena Taylor</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <style>
     body {
       margin: 0;
+      font-family: 'Press Start 2P', cursive;
       background: #0d0d0d;
       color: white;
-      font-family: 'Press Start 2P', cursive;
     }
 
     .page {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
+      padding: 60px 24px;
     }
 
     h1 {
-      color: #FFD1DC;
       text-align: center;
+      color: #FFB6C1;
       margin-bottom: 20px;
-      font-size: 32px;
     }
 
     p {
-      color: #ddd;
       text-align: center;
-      line-height: 1.8;
-      font-size: 12px;
       max-width: 900px;
-      margin: 0 auto 40px;
+      margin: 0 auto 60px auto;
+      color: #ccc;
+      line-height: 1.8;
     }
 
     .back-btn {
-      display: inline-block;
-      margin-bottom: 30px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #FFB6C1;
       color: black;
-      background: #FFD1DC;
-      text-decoration: none;
-      padding: 12px 18px;
+      padding: 10px 16px;
       border-radius: 10px;
-      font-size: 12px;
+      text-decoration: none;
     }
 
-    .gallery {
+    .back-btn:hover {
+      background: #DB7093;
+    }
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(250px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
     }
 
-    .gallery img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      border-radius: 12px;
-      display: block;
+    .card {
       background: #1a1a1a;
+      border-radius: 20px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow:
+        0 0 15px rgba(255,182,193,0.4),
+        0 0 30px rgba(255,182,193,0.2);
+      outline: 2px solid rgba(255,182,193,0.7);
+    }
+
+    .card h3 {
+      color: #FFB6C1;
+      margin-top: 15px;
+    }
+
+    .card p {
+      text-align: left;
+      margin: 10px 0 0;
+      color: #ccc;
+    }
+
+    /* FAKE 3D VIEWER (animação) */
+    .viewer {
+      height: 300px;
+      border-radius: 20px;
+      background: radial-gradient(circle at top, rgba(255,182,193,0.2), transparent 40%), #0d0d0d;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cube {
+      width: 100px;
+      height: 100px;
+      background: #DB7093;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      animation: spin 6s linear infinite;
+    }
+
+    .ring {
+      width: 180px;
+      height: 180px;
+      border: 3px solid #FFB6C1;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 10s linear infinite reverse;
+    }
+
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* imagens */
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="page">
-    <a href="index.html" class="back-btn">Back</a>
 
-    <h1>3D Render</h1>
-    <p>
-      A selection of 3D renders showcasing modeling, lighting,
-      composition, atmosphere and scene presentation.
-    </p>
+<a href="index.html" class="back-btn">Back</a>
 
-    <div class="gallery">
-      <img src="render1.png" alt="3D render 1">
-      <img src="render2.png" alt="3D render 2">
-      <img src="render3.png" alt="3D render 3">
-      <img src="render4.png" alt="3D render 4">
-      <img src="render5.png" alt="3D render 5">
-      <img src="render6.png" alt="3D render 6">
+<div class="page">
+
+  <h1>3D Render</h1>
+
+  <p>
+    A selection of stylized 3D renders focused on atmosphere, lighting, and game environments.
+  </p>
+
+  <div class="grid">
+
+    <!-- CARD INTERATIVO -->
+    <div class="card">
+      <model-viewer
+        src="keycard.glb"
+        alt="3D model preview"
+        auto-rotate
+        camera-controls
+        shadow-intensity="1"
+  exposure="1"
+  style="width: 100%; height: 350px; background: radial-gradient(circle at top, rgba(255,182,193,0.18), transparent 30%), linear-gradient(135deg, #1a1a1a, #0d0d0d); border-radius: 20px; overflow: hidden;"
+>
+</model-viewer>
+
+<h3>Interactive Preview</h3>
+<p>3D model preview.</p>
     </div>
+
+    <!-- CARDS COM IMAGEM -->
+    <div class="card">
+      <img src="render1.png">
+      <h3>Dark Room</h3>
+      <p>Moody horror environment with strong lighting contrast.</p>
+    </div>
+
+    <div class="card">
+      <img src="render2.png">
+      <h3>Club Scene</h3>
+      <p>Neon-lit space focused on composition and storytelling.</p>
+    </div>
+
+    <div class="card">
+      <img src="render3.png">
+      <h3>Ritual Space</h3>
+      <p>Atmospheric environment focused on immersion.</p>
+    </div>
+
   </div>
+
+</div>
+
 </body>
 </html>
