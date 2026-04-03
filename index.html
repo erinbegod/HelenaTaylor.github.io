@@ -13,40 +13,41 @@
       color: #FFC0CB;
     }
 
-    h1 {
-      margin: 0;
+     h1 {
+      margin: 0 auto;
       font-size: 40px;
       color: #DB7093;
-
       position: relative;
-      display: inline-block;
+      display: block;
+      width: fit-content;
       overflow: hidden;
-    }
+     }
 
     h1::after {
       content: "";
       position: absolute;
       top: 0;
-      left: -100%;
-      width: 100%;
+      left: -30%;
+      width: 18%;
       height: 100%;
+      transform: skewX(-20deg);
 
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255,255,255,0.6) 50%,
-    transparent 100%
+      background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255,255,255,0.75) 50%,
+      transparent 100%
   );
 
-  animation: shine 4s linear infinite;
+  animation: shine 5s ease-in-out infinite;
 }
 
 @keyframes shine {
   0% {
-    left: -100%;
+    left: -30%;
   }
   100% {
-    left: 100%;
+    left: 115%;
   }
 }
     h2 {
