@@ -160,21 +160,21 @@ header {
 .side-lines span {
   display: block;
   width: 14px;
-  border-radius: 999px 999px 0 0;
+  border-radius: 0;
   background: black;
 
   height: 0;
-  animation: riseLine 0.8s ease-out forwards;
+  animation: growLine 0.8s ease-out forwards;
 }
 
 .side-lines span:nth-child(1) {
-  height: 450px;
+  --final-height: 450px;
   animation-delay: 0.10s;
 }
 
-.side-lines span:nth-child(2) {
-  height: 600px;
-  animation-delay: 0.22s;
+.side-lines span:nth-child(3) {
+  --final-height: 520px;
+  animation-delay: 0.34s;
 }
 
 .side-lines span:nth-child(3) {
@@ -183,7 +183,7 @@ header {
 }
 
 .side-lines span:nth-child(4) {
-  height: 400px;
+  --final-height: 400px;
   animation-delay: 0.46s;
 }
 
