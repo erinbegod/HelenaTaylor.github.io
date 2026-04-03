@@ -45,61 +45,7 @@
       border-radius: 12px;
       transition: 0.3s;
     }
-     header {
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-      padding: 80px 20px 120px 20px;
-      background: #ead3d3;
-    }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .side-lines {
-      position: absolute;
-      bottom: 0;
-      width: 220px;
-      height: 100%;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-evenly;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .left-lines {
-      left: 30px;
-    }
-
-    .right-lines {
-      right: 30px;
-      transform: scaleX(-1);
-    }
-
-    .side-lines span {
-      display: block;
-      width: 12px;
-      border-radius: 999px 999px 0 0;
-      background: rgba(255, 150, 180, 0.9);
-      box-shadow: 0 0 12px rgba(255, 150, 180, 0.35);
-      transform: translateY(140px);
-      opacity: 0;
-      animation: riseLine 1s ease-out forwards;
-    }
-
-@keyframes riseLine {
-  from {
-    transform: translateY(140px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(500px, 1fr));
@@ -177,33 +123,106 @@
        border-radius: 8px;
        display: block;
     }
+header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 80px 20px 120px 20px;
+  background: #FFE4E1;
+}
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.side-lines {
+  position: absolute;
+  bottom: 0;
+  width: 220px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.left-lines {
+  left: 30px;
+}
+
+.right-lines {
+  right: 30px;
+  transform: scaleX(-1);
+}
+
+.side-lines span {
+  display: block;
+  width: 14px;
+  border-radius: 999px 999px 0 0;
+  background: rgba(255, 150, 180, 0.95);
+  box-shadow: 0 0 12px rgba(255, 150, 180, 0.35);
+  transform: translateY(140px);
+  opacity: 0;
+  animation: riseLine 1s ease-out forwards;
+}
+
+.side-lines span:nth-child(1) {
+  height: 180px;
+  animation-delay: 0.10s;
+}
+
+.side-lines span:nth-child(2) {
+  height: 320px;
+  animation-delay: 0.22s;
+}
+
+.side-lines span:nth-child(3) {
+  height: 240px;
+  animation-delay: 0.34s;
+}
+
+.side-lines span:nth-child(4) {
+  height: 140px;
+  animation-delay: 0.46s;
+}
+
+@keyframes riseLine {
+  from {
+    transform: translateY(140px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
   </style>
 </head>
 
 <body>
 
 <header>
+  <div class="side-lines left-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-<div class="side-lines left-lines">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+  <div class="hero-content">
+    <img src="banner.png" class="banner">
+    <h1>Helena Taylor</h1>
+    <p class="subtitle">Game Artist • 2D • 3D • Pixel Art • Concept Art</p>
+  </div>
 
-<div class="hero-content">
-  <img src="banner.png" class="banner">
-  <h1>Helena Taylor</h1>
-  <p class="subtitle">Game Artist • 2D • 3D • Pixel Art • Concept Art</p>
-</div>
-
-<div class="side-lines right-lines">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+  <div class="side-lines right-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
 <div class="section">
